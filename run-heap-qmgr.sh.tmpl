@@ -1,0 +1,5 @@
+#!/bin/bash
+umask 002
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+export FFMPEG_DATADIR=/usr/share/ffmpeg/
+exec /usr/bin/php -q /vol/website/vendor/bin/heap_qmgr -c 50 --nonstop 10 {{ '-q ' ~ VAR_HEAP_QUEUE_NAME if VAR_HEAP_QUEUE_NAME  }}
