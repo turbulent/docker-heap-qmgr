@@ -1,7 +1,7 @@
 FROM turbulent/heap-app:4.0.0
 MAINTAINER Benoit Beausejour <b@turbulent.ca>
 
-ENV heap-qmgr 4.0.0
+ENV heap-qmgr 4.0.1
 
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update &&  \
