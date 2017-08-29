@@ -2,6 +2,16 @@
 nodaemon=true
 logfile=/vol/logs/{{HOSTNAME}}-supervisord.log
 
+[unix_http_server]
+file=/var/run/supervisor.sock
+chmod=0700
+
+[rpcinterface:supervisor]
+supervisor.rpcinterface_factory = supervisor.rpcinterface:make_main_rpcinterface
+
+[supervisorctl]
+serverurl=unix:///var/run/supervisor.sock
+
 [program:heap-qmgr]
 process_name=heap-qmgr-%(process_num)s
 command=/run-heap-qmgr.sh
@@ -14,6 +24,9 @@ autorestart=true
 redirect_stderr=true
 stdout_events_enabled=true
 stderr_events_enabled=true
+stdout_logfile=/vol/logs/{{HOSTNAME}}-heap-qmgr-%(process_num)s.log
+umask=002
+priority=1
 
 [program:nullmailer]
 command=/run-nullmailer.sh
