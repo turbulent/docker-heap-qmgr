@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic
 Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [6.0.0] - 2018-03-29
+### Changed
+- Upgraded base image to heap-app:5.0.1 (PHP 7.2.2).
+
 ## [5.0.0] - 2017-11-20
 ### Changed
 - Command to start queue has been changed to `/vol/website/vendor/bin/heap queue:consume [queue]` in accordance with Heap 3.0 change.
