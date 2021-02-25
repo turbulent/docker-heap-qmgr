@@ -1,7 +1,7 @@
-FROM turbulent/heap-app:5.0.1
-MAINTAINER Benoit Beausejour <b@turbulent.ca>
+FROM turbulent/heap-app:5.3.6
+LABEL MAINTAINER="Benoit Beausejour <b@turbulent.ca>"
 
-ENV heap-qmgr 6.0.0
+ENV heap-qmgr 6.0.2
 
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update &&  \
@@ -9,7 +9,7 @@ RUN apt-get update &&  \
                         ghostscript \
                         libreoffice \
                         pdftk && \
-  rm -rf /var/lib/apt/lists/* 
+  rm -rf /var/lib/apt/lists/*
 
 ADD supervisord.conf.tmpl /systpl/supervisord.conf.tmpl
 ADD run-heap-qmgr.sh.tmpl /systpl/run-heap-qmgr.sh.tmpl

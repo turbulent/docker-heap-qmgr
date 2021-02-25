@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic
 Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [6.0.2] - 2021-02-25
+### Changed
+- Update to heap-app 5.3.6 to better support MySQL 8
+
 ## [6.0.0] - 2018-03-29
 ### Changed
 - Upgraded base image to heap-app:5.0.1 (PHP 7.2.2).
