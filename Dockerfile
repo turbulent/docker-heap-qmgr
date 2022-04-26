@@ -1,7 +1,7 @@
-FROM turbulent/heap-app:5.3.8
+FROM turbulent/heap-app:6.0.3
 LABEL MAINTAINER="Benoit Beausejour <b@turbulent.ca>"
 
-ENV heap-qmgr 6.0.4
+ENV heap-qmgr 6.0.5
 
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update &&  \
